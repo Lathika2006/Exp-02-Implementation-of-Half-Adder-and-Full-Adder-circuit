@@ -38,17 +38,70 @@ If the output is 1, then the led glows.
 Program:
 /*
 Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-Logic symbol & Truthtable
-RTL realization
 
-### Output:
-### RTL
+Developed by: LATHIKA L.J
+RegisterNumber:  23012411
+
+*/
+###HALF ADDER:
+
+###Code:
+
+module Halfadder(sum,a,b,carry);
+
+input a,b;
+
+output sum,carry;
+
+xor(sum,a,b);
+
+and(carry,a,b);
+
+endmodule 
+
+###RTL Diagram:
+
+
+![image](https://github.com/Lathika2006/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/148959215/f952dcf1-fe69-4d09-bf1a-64c165b1a8e6)
+
+### Truth Table:
+
+
+![image](https://github.com/Lathika2006/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/148959215/bd5a5cd6-89df-43ad-a6a9-30e604ba3740)
+
 ### TIMING DIAGRAM
 
 
-### TRUTH TABLE 
+![image](https://github.com/Lathika2006/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/148959215/982ad477-3a90-47ef-8262-7a89e6961fcc)
+
+### FULL ADDER
+
+###Code:
+
+module fulladder(a,b,c,sum,carry);
+
+input a,b,c;
+
+output sum,carry;
+
+xor(sum,a,b,c);
+
+assign carry=a&b | b&c| a&c;
+
+endmodule
+
+###RTL Diagram:
+
+![image](https://github.com/Lathika2006/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/148959215/2ae22c99-4f69-4019-a001-1d6feb39cdb7)
+
+##Truth Table:
+
+![image](https://github.com/Lathika2006/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/148959215/6d5933b8-06f7-415d-b47d-1b88939af352)
+
+###Timing Diagram:
+
+![image](https://github.com/Lathika2006/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/148959215/5dc065e3-a053-4a2e-a4a7-e8caeef2d6b9)
 
 ### Result:
+
+Thus the given half adder and full adder are verified using verilog programming.
